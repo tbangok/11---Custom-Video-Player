@@ -27,7 +27,7 @@ function updateButton() {
 
 //skip
 function skip() { 
-    video.currentTime += parseFloat(this.dataset.skip)
+    video.currentTime += parseFloat(this.dataset.skip);
 }
 
 //range
@@ -41,11 +41,9 @@ function progressUpdate() {
  progressBar.style.flexBasis = `${percent}%`;
 }
 
-function scrub(e) {
-    console.log(e);
+function scrub(e) { 
     const scrubTime=(e.offsetX/progress.offsetWidth) * video.duration;
-    video.currentTime = scrubTime;
-    progressBar.style.flexBasis = `${scrubTime}%`;
+    video.currentTime = scrubTime; 
 }
 
 
